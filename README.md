@@ -70,6 +70,70 @@ Symbolic regression offers a powerful bridge between **machine learning** and **
 
 ---
 
+## 📊 Synthetic Data Generation
+
+To explore whether a machine can rediscover the fundamental laws of physics without being explicitly told them, we generated two synthetic datasets. Each simulates a real-world physical scenario in a controlled yet realistic way.
+
+---
+
+### ⚙️ 1. Free Fall with Environmental Resistance
+
+We modeled objects falling from different heights in three environments: vacuum, air, and water. The fall time was adjusted using a manually defined resistance factor, simulating drag or fluid friction.
+
+#### 🧮 Underlying idea:
+
+> Fall time increases as air or water resistance increases. We simulate this using a simple scaling factor.
+
+#### 🧾 Code snippet:
+
+```python
+import numpy as np
+
+n = 5000
+np.random.seed(42)
+
+height = np.random.uniform(1, 100, size=n)       # Random height in meters
+gravity = np.full(n, 9.81)                       # Constant gravitational acceleration
+
+# Randomly assign environments
+environments = np.random.choice(['vacuum', 'air', 'water'], size=n, p=[0.2, 0.6, 0.2])
+
+# Manual mapping of resistance
+def get_air_resistance(env):
+    if env == 'vacuum': return 0.0
+    if env == 'air': return 0.5
+    if env == 'water': return 2.0
+
+air_resistance = np.array([get_air_resistance(e) for e in environments])
+
+# Calculate fall time and back-calculate acceleration
+fall_time = np.sqrt(2 * height / gravity) * (1 + 0.1 * air_resistance)
+acceleration = 2 * height / fall_time**2
+
+
+## 🧪 Symbolic Discovery of Newton’s Second Law — \( F = m \cdot a \)
+
+In this experiment, we explored whether a machine can rediscover Newton’s second law of motion from pure numeric data.
+
+We generated a synthetic dataset of 5000 examples using randomized values for mass and acceleration. The force was computed directly using the classical physics formula:
+
+$$
+F = m \cdot a
+$$
+
+---
+
+### 🧰 Data Generation Code
+
+```python
+np.random.seed(42)
+n = 5000
+
+mass = np.random.uniform(0.1, 100, size=n)         # Random mass (kg)
+acceleration = np.random.uniform(0.1, 20, size=n)  # Random acceleration (m/s²)
+force = mass * acceleration                        # Newton's 2nd Law
+
+
 ## 📈 Tools Used
 
 - `pysr` — Symbolic regression engine  
