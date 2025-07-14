@@ -109,9 +109,10 @@ air_resistance = np.array([get_air_resistance(e) for e in environments])
 # Calculate fall time and back-calculate acceleration
 fall_time = np.sqrt(2 * height / gravity) * (1 + 0.1 * air_resistance)
 acceleration = 2 * height / fall_time**2
+```
+---
 
-
-## 🧪 Symbolic Discovery of Newton’s Second Law — \( F = m \cdot a \)
+## 🧪 Symbolic Discovery of Newton’s Second Law — $$( F = m \cdot a\)$$
 
 In this experiment, we explored whether a machine can rediscover Newton’s second law of motion from pure numeric data.
 
@@ -133,7 +134,7 @@ mass = np.random.uniform(0.1, 100, size=n)         # Random mass (kg)
 acceleration = np.random.uniform(0.1, 20, size=n)  # Random acceleration (m/s²)
 force = mass * acceleration                        # Newton's 2nd Law
 
-
+```
 ## 📈 Tools Used
 
 - `pysr` — Symbolic regression engine  
