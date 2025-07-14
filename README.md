@@ -12,9 +12,9 @@ This project was born from a single question:
 
 Inspired by this thought, I built a system that uses **symbolic regression** to rediscover physical laws such as:
 
-- \( a = g \)
-- \( a = \frac{2h}{t^2} \)
-- \( F = ma \)
+- $$( a = g )$$
+- $$( a = \frac{2h}{t^2} )$$
+- $$( F = ma )$$
 
 The result?  
 ✅ It works — **three separate models**, each learning a core physical equation from data, with near-perfect accuracy.
