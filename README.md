@@ -37,9 +37,7 @@ Each folder represents a self-contained model setup, trained on synthetic but ph
 - No air resistance  
 - Acceleration derived from time & height  
 - Model discovers:
-  $$
-  a = g
-  $$
+  $$a = g$$
 
 ---
 
@@ -48,9 +46,7 @@ Each folder represents a self-contained model setup, trained on synthetic but ph
 - Resistance factor alters fall time  
 - Simulates air and water environments  
 - Model discovers:
-  $$
-  a = g + R \cdot (R \cdot 0.2169 - 1.9325)
-  $$
+  $$a = g + R \cdot (R \cdot 0.2169 - 1.9325)$$
 - A nonlinear correction for resistance — learned from scratch.
 
 ---
@@ -60,11 +56,9 @@ Each folder represents a self-contained model setup, trained on synthetic but ph
 - Inputs: mass and acceleration  
 - Target: force  
 - Model rediscovers:
-  $$
-  F = m \cdot a
-  $$
+  $$F = m \cdot a$$
 
-✅ With perfect \( R^2 = 1.0 \)
+✅ With perfect $$( R^2 = 1.0 )$$
 
 ---
 
