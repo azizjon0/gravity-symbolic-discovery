@@ -112,7 +112,7 @@ acceleration = 2 * height / fall_time**2
 ```
 ---
 
-## 🧪 Symbolic Discovery of Newton’s Second Law — $$( F = m \cdot a\)$$
+### 🧪 2.Symbolic Discovery of Newton’s Second Law — $$( F = m \cdot a\)$$
 
 In this experiment, we explored whether a machine can rediscover Newton’s second law of motion from pure numeric data.
 
