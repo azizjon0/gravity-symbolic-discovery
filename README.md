@@ -1,4 +1,6 @@
-# gravity-symbolic-discovery
+# Gravity Symbolic Discovery
+![](images/Main.png)
+
 > Can a neural-symbolic model rediscover the laws that a 3-year-old can intuitively grasp?
 
 ---
