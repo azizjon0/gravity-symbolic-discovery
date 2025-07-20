@@ -58,8 +58,6 @@ Each folder represents a self-contained model setup, trained on synthetic but ph
 - Model rediscovers:
   $$F = m \cdot a$$
 
-✅ With perfect $$( R^2 = 1.0 )$$
-
 ---
 
 ## 🧠 Key Insight
